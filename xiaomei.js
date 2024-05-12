@@ -5,13 +5,13 @@ const { sleep } = require("./utils");
 
 /** 小美评审任务编号 */
 const VOTE_TASK_LIST = [
-  //   "XM_JA240512697214878",
+  "XM_JA240512697214878",
   //   "XM_JA240512686495752",
   //   "XM_JA24051269228183X",
   //   "XM_JA240511680984256",
   //   "XM_JA240512705172069",
-  "MOCK-1-XM_JA231126004939522",
-  "MOCK-1-XM_JA231028933196985",
+  //   "MOCK-1-XM_JA231126004939522",
+  //   "MOCK-1-XM_JA231028933196985",
   //   "MOCK-1-XM_JA231121013177714",
   //   "MOCK-1-XM_JA231223119995428",
   //   "MOCK-1-XM_JA211223078042042",
@@ -51,7 +51,7 @@ const getCurPageComment = async (pageNo, voteTaskNo) => {
       },
     }
   );
-  await sleep(3);
+  await sleep(3, 10);
 
   return res;
 };

@@ -2,9 +2,11 @@ const fs = require("fs");
 const path = require("path");
 
 /** 休息 */
-function sleep(s) {
+function sleep(min = 3, max = 10) {
+  const randomDelay = Math.floor(Math.random() * (max - min + 1) + min);
+
   return new Promise((resolve) => {
-    setTimeout(resolve, 1000 * s);
+    setTimeout(resolve, 1000 * randomDelay);
   });
 }
 
